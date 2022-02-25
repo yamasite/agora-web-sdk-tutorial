@@ -60,7 +60,6 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
         site {
           siteMetadata {
             headerTitle
-            githubUrl
             helpUrl
 
             headerLinks {
