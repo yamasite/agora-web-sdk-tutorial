@@ -7,7 +7,7 @@ const config = {
   },
   header: {
     title:
-      "声网 Agora 实时音视频 Web SDK 教程",
+      "<a href='https://agorawebsdktutorialmain.gatsbyjs.io/'>声网 Agora 实时音视频 Web SDK 教程</a>",
     helpUrl: '',
     tweetText: '',
     social: ``,
