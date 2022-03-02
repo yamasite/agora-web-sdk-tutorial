@@ -34,13 +34,17 @@ const elements = [
 ];
 
 const BasicFlow = () => (
-  <div style={{ height: 500 }}>
+  <div style={{ height: 5000 }}>
     <ReactFlow
     elements={elements}
     paneMoveable={false}
     nodesDraggable={false}
-    zoomOnScroll={false}
-    panOnScroll={false}
+    zoomOnScroll={true}
+    panOnScroll={true}
+    panOnScrollMode={"free"}
+    panOnScrollSpeed={1}
+    nodesConnectable={false}
+    elementsSelectable={true}
     />
   </div>
 );
