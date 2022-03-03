@@ -7,28 +7,28 @@ const elements = [
    {
      id: '1',
      type: 'input', // input node
-     data: { label: <div>2：音视频采集设备（摄像头、麦克风）</div>},
+     data: { label: <div>音视频采集设备（摄像头、麦克风）</div>},
      position: { x: 50, y: 25 },
      style:{fontSize: 18},
   },
   {
     id: '2',
     type: 'input', // input node
-    data: { label: <div>3：音视频渲染设备（屏幕、扬声器）</div> },
+    data: { label: <div>音视频渲染设备（屏幕、扬声器）</div> },
     position: { x: 450, y: 25 },
     style:{fontSize: 18},
   },
   {
     id: '3',
     type: 'default', // input node
-    data: { label: <div>1：声网实时音视频 Web SDK</div> },
+    data: { label: <div>声网实时音视频 Web SDK</div> },
     position: { x: 250, y: 225 },
     style:{fontSize: 18},
   },
   {
     id: '5',
     type: 'default', // output node
-    data: { label: <div>4：音视频传输通道（SD-RTN™）</div> },
+    data: { label: <div>音视频传输通道（SD-RTN™）</div> },
     position: { x: 250, y: 425 },
     style:{fontSize: 18},
   },
