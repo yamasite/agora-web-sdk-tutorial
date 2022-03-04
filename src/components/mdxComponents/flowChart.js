@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ReactFlow from 'react-flow-renderer';
-
-import CustomEdge from './CustomEdge';
+import { MiniMap } from 'react-flow-renderer';
+import { Controls } from 'react-flow-renderer';
 
 const elements = [
    {
@@ -15,7 +15,7 @@ const elements = [
     id: '2',
     type: 'input', // input node
     data: { label: <div>音视频渲染设备（屏幕、扬声器）</div> },
-    position: { x: 450, y: 25 },
+    position: { x: 50, y: 425 },
     style:{fontSize: 18},
   },
   {
@@ -29,19 +29,15 @@ const elements = [
     id: '5',
     type: 'default', // output node
     data: { label: <div>音视频传输通道（SD-RTN™）</div> },
-    position: { x: 250, y: 425 },
+    position: { x: 550, y: 225 },
     style:{fontSize: 18},
   },
   // animated edge
-  { id: 'e1-3', source: '1', target: '3', animated: true, data: { text: '采集' }, type: 'custom', arrowHeadType: 'arrow',},
-  { id: 'e3-2', source: '3', target: '2', animated: true,  data: { text: '渲染' }, type: 'custom', arrowHeadType: 'arrow',},
-  { id: 'e3-5', source: '3', target: '5', animated: true, data: { text: '视频编解码与传输' }, type: 'custom', arrowHeadType: 'arrow',},
-  { id: 'e5-3', source: '5', target: '3', animated: true, data: { text: '' }, type: 'custom', arrowHeadType: 'arrow',},
+  { id: 'e1-3', source: '1', target: '3', animated: true,  type: 'custom', arrowHeadType: 'arrow',},
+  { id: 'e3-2', source: '3', target: '2', animated: true,  type: 'custom', arrowHeadType: 'arrow',},
+  { id: 'e3-5', source: '3', target: '5', animated: true,  type: 'custom', arrowHeadType: 'arrow',},
+  { id: 'e5-3', source: '5', target: '3', animated: true,  type: 'custom', arrowHeadType: 'arrow',},
 ];
-
-const edgeTypes = {
-    custom: CustomEdge,
-  };
 
 // Use custom node styles
 const customNodeStyles = {
@@ -51,23 +47,39 @@ const customNodeStyles = {
     height: 800,
   };
 
-
 const BasicFlow = () => (
   <div style={customNodeStyles}>
     <ReactFlow
     elements={elements}
     paneMoveable={false}
     nodesDraggable={false}
-    zoomOnScroll={false}
+    zoomOnScroll={true}
     panOnScroll={true}
     panOnScrollMode={"vertical"}
     // panOnScrollSpeed={1}
     nodesConnectable={false}
     elementsSelectable={true}
     snapToGrid={true}
-    edgeTypes={edgeTypes}
-    key="edges"
+    zoomOnDoubleClick={false}
+    >
+        <Controls showInteractive={false}/>
+
+        <MiniMap
+        nodeColor={(node) => {
+        switch (node.type) {
+          case 'input':
+            return 'red';
+          case 'default':
+            return '#00ff00';
+          case 'output':
+            return 'rgb(0,0,255)';
+          default:
+            return '#eee';
+        }
+      }}
+      nodeStrokeWidth={3}
     />
+    </ReactFlow>
   </div>
 );
 
