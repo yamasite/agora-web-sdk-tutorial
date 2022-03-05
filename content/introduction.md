@@ -6,7 +6,11 @@ metaDescription: "一行代码集成 SDK"
 
 在这个部分，你将学会如何用一行代码集成声网实时音视频 Web SDK 并验证 SDK 版本。
 
-## 获取并集成 SDK
+## 实现方法
+
+你可以通过以下方法集成并验证 SDK 版本。本文假设你的项目是纯 HTML + JavaScript + CSS。
+
+### 获取并集成 SDK
 
 最简单的方式是通过网络链接获取并集成。本教程以 v4.9.3 为例。你可以在 HTML 文件的 `<head>` 部分加入引用：
 
@@ -14,7 +18,7 @@ metaDescription: "一行代码集成 SDK"
 <script src="https://download.agora.io/sdk/release/AgoraRTC_N-4.9.3.js" type="text/javascript"></script>
 ```
 
-## 验证 SDK 版本
+### 验证 SDK 版本
 
 我们可以通过调用 SDK 的方法，将 SDK 版本打印到 HTML 文件中来验证集成。
 
@@ -27,17 +31,20 @@ metaDescription: "一行代码集成 SDK"
 在 JavaScript 文件中，先通过 `version` 变量获取 SDK 版本号，再通过 `getElementById` 方法将版本号打印到 HTML 中。
 
 ```javascript
+// AgoraRTC 类是声网实时音视频 Web SDK 的调用入口
 let version = AgoraRTC.VERSION;
+// 将 SDK 版本号打印到 HTML 中
 document.getElementById("version").innerHTML = version;
 ```
 
-## 实操环节
+## 实际验证
 
-你可以在下面的控件中对文件进行编辑，并运行验证效果。
+你可以在下面的控件中分别对 HTML、CSS 和 JavaScript 文件进行编辑，并运行项目验证效果。如果运行成功，HTML 页面会显示 SDK 的版本号。
+
+项目中已经引用了 SDK 文件作为外部 JavaScript，你可以点击 **Resources** 按钮查看。
 
 <iframe height="400" style="width: 200%;" scrolling="no" title="Agora RTC Web SDK Tutorial" src="https://codepen.io/yamasite/embed/preview/dyZaqMM?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/yamasite/pen/dyZaqMM">
   Agora RTC Web SDK Tutorial</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
-
