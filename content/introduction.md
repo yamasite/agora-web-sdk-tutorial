@@ -1,7 +1,7 @@
 ---
-title: "一行代码集成 SDK"
-metaTitle: "一行代码集成 SDK"
-metaDescription: "一行代码集成 SDK"
+title: "00：一行代码集成 SDK"
+metaTitle: :00：一行代码集成 SDK"
+metaDescription: :00：一行代码集成 SDK"
 ---
 
 在这个部分，你将学会如何用一行代码集成声网实时音视频 Web SDK 并验证 SDK 版本。
@@ -10,7 +10,7 @@ metaDescription: "一行代码集成 SDK"
 
 你可以通过以下方法集成并验证 SDK 版本。本文假设你的项目是纯 HTML + JavaScript + CSS。
 
-### 获取并集成 SDK
+### 步骤一：获取并集成 SDK
 
 最简单的方式是通过网络链接获取并集成。本教程以 v4.9.3 为例。你可以在 HTML 文件的 `<head>` 部分加入引用：
 
@@ -18,17 +18,22 @@ metaDescription: "一行代码集成 SDK"
 <script src="https://download.agora.io/sdk/release/AgoraRTC_N-4.9.3.js" type="text/javascript"></script>
 ```
 
-### 验证 SDK 版本
+### 步骤二：验证 SDK 版本
 
 我们可以通过调用 SDK 的方法，将 SDK 版本打印到 HTML 文件中来验证集成。
 
-确保你的 HTML 文件中包含一个 id 为 `"version"` 的 `<p>` 标签：
+确保你的 HTML 文件中包含一个 id 为 `version` 的 `<p>` 标签：
+
+**HTML**
 
 ```html
+<p>你使用的声网实时音视频 Web SDK 版本是：</p>
 <p id="version"> </p>
 ```
 
 在 JavaScript 文件中，先通过 `version` 变量获取 SDK 版本号，再通过 `getElementById` 方法将版本号打印到 HTML 中。
+
+**JavaScript**
 
 ```javascript
 // AgoraRTC 类是声网实时音视频 Web SDK 的调用入口
@@ -37,7 +42,7 @@ let version = AgoraRTC.VERSION;
 document.getElementById("version").innerHTML = version;
 ```
 
-## 实际验证
+## 效果验证
 
 你可以在下面的控件中分别对 HTML、CSS 和 JavaScript 文件进行编辑，并运行项目验证效果。如果运行成功，HTML 页面会显示 SDK 的版本号。
 
@@ -48,3 +53,8 @@ document.getElementById("version").innerHTML = version;
   Agora RTC Web SDK Tutorial</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+
+
+## 更多信息
+
+你可以访问声网官方网站获取最新版 SDK 的 [Web SDK 下载链接](https://docs.agora.io/cn/Interactive%20Broadcast/downloads?platform=Web)。

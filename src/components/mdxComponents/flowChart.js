@@ -68,11 +68,11 @@ const BasicFlow = () => (
         nodeColor={(node) => {
         switch (node.type) {
           case 'input':
-            return 'red';
+            return '#00ff00';
           case 'default':
             return '#00ff00';
           case 'output':
-            return 'rgb(0,0,255)';
+            return '#00ff00';
           default:
             return '#eee';
         }

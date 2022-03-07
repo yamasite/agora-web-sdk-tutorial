@@ -23,6 +23,7 @@ const config = {
   sidebar: {
     forcedNavOrder: [
       '/introduction', // add trailing slash if enabled above
+      '/video-capture-render',
       '/codeblock',
     ],
     collapsedNav: [
