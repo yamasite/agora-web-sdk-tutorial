@@ -48,7 +48,7 @@ document.getElementById("version").innerHTML = version;
 
 项目中已经引用了 SDK 文件作为外部 JavaScript，你可以点击 **Resources** 按钮查看。
 
-<iframe height="400" style="width: 200%;" scrolling="no" title="Agora RTC Web SDK Tutorial" src="https://codepen.io/yamasite/embed/preview/dyZaqMM?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="400" style="width: 100%;" scrolling="no" title="Agora RTC Web SDK Tutorial" src="https://codepen.io/yamasite/embed/preview/dyZaqMM?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/yamasite/pen/dyZaqMM">
   Agora RTC Web SDK Tutorial</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -57,4 +57,4 @@ document.getElementById("version").innerHTML = version;
 
 ## 更多信息
 
-你可以访问声网官方网站获取最新版 SDK 的 [Web SDK 下载链接](https://docs.agora.io/cn/Interactive%20Broadcast/downloads?platform=Web)。
+你可以访问声网官方网站获取最新版的 [声网实时音视频 Web SDK](https://docs.agora.io/cn/Interactive%20Broadcast/downloads?platform=Web)。
