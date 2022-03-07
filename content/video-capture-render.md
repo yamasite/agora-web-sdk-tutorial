@@ -159,7 +159,7 @@ metaDescription: "01：使用 SDK 采集并渲染本地视频"
 
 ## 效果验证
 
-<iframe height="400" style="width: 100%;" scrolling="no" title="02: Capture video through camera and render locally" src="https://codepen.io/yamasite/embed/MWOxdGa?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" allow="microphone;camera">
+<iframe height="400" style="width: 100%;" scrolling="no" title="02: Capture video through camera and render locally" src="https://codepen.io/yamasite/embed/MWOxdGa?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" allow="microphone;camera">
   See the Pen <a href="https://codepen.io/yamasite/pen/MWOxdGa">
   02: Capture video through camera and render locally</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
