@@ -19,12 +19,51 @@ metaDescription: "03：建立传输通道"
 
     > 声网实时音视频 Web SDK 定义了用户名（uid），用于标记某个特定的人，从而实现一对一通话。
 
-    > 但是，通话的场景显然不止一对一，还可能是多对多。比如，Alice、Bob 和 Charlie 三人互相视频通话。在这种情况下，一个一个互相传输用户名会非常麻烦，因此声网实时音视频 Web SDK 还引入了频道（channel）的概念。如果三个人都加入相同的频道，在频道中就可以广播发送媒体流，这样频道内的其他人都能收到媒体流而无需一对一传递用户名信息。
+    > 但是，通话的场景显然不止一对一，还可能是一对多或者多对多。比如，Alice、Bob 和 Charlie 三人互相视频通话。在这种情况下，一个一个互相传输用户名会非常麻烦，因此声网实时音视频 Web SDK 还引入了频道（channel）的概念。一个频道可以容纳多人。如果三个人都加入相同的频道，就可以在频道中广播发送媒体流，这样频道内的其他人都能收到媒体流而无需一对一传递用户名信息。
 
 在声网实时音视频 Web SDK 中，你需要进行以下操作：
 
-1. 调用 `createClient` 创建客户端实例。
-2. 调用 `join` 方法加入频道。
+1. 调用 `createClient` 创建客户端实例。你需要配置传输通道模式、视频编码格式等参数。SDK 会把采集的音视频帧编码后发送到 SD-RTN™ 进行传输。
+
+    ```javascript
+    // 通话模式，VP8 视频编码格式
+    let config = {mode: "rtc", codec: "vp8"};
+    // 创建客户端实例
+    let client = AgoraRTC.createClient(config);
+    ```
+
+2. 创建频道事件监听回调。声网实时音视频 Web SDK 会通过回调函数返回传输通道的状态。回调函数重写了 Node.js 的 [EventEmitter](https://nodejs.org/api/events.html#class-eventemitter)。
+
+
+
+3. 调用 `join` 方法加入频道。你需要配置 App ID、Token、频道名（channelId）和用户名（uid）。
+
+    > App ID 是你的应用使用声网云服务的凭证。你会发现，教程之前的部分完全没有用到 App ID，这是因为你之前的操作都是在本地进行的，并没有涉及到音视频传输。你需要参考 [开始使用 Agora 平台](https://docs.agora.io/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms) 注册声网 Agora 账号，创建一个声网 Agora 项目（鉴权机制选择 **调试模式：App ID** ）并获取 App ID。
+
+    > Token 是声网为了提升你的 App 的安全性而设计的一种鉴权机制，与 App ID 结合使用。你可以自行选择是否启用。出于学习成本的考虑，为了降低复杂度，本教程建议你暂不使用 Token 鉴权。
+
+    > 频道名和用户名的概念可以参考上文的解释。如果你没有启用 Token 鉴权，你可以任意为频道名和用户名命名。例如，频道名可以是 `"testChannel"`，用户名可以是 `123456`。
+
+    ```javascript
+    // 声网 App ID
+    let appId = "";
+    // 频道名。
+    let channelId = "testChannel";
+    // Token。不使用 Token 鉴权时填 null。
+    let token = null;
+    // 用户名。
+    let uid = 123456;
+
+    // 加入频道
+    client.join(appId, channelId, token, uid)
+    .then((uid) => {
+        console.log(uid + " joined channel!", e);
+        }
+    })
+    .catch((e) => {
+        console.log("Failed to join channel!", e);
+    });
+    ```
 
 ## 效果验证
 
