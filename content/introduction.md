@@ -1,10 +1,10 @@
 ---
 title: "00：一行代码集成 SDK"
-metaTitle: :00：一行代码集成 SDK"
-metaDescription: :00：一行代码集成 SDK"
+metaTitle: 00：一行代码集成 SDK"
+metaDescription: 00：一行代码集成 SDK"
 ---
 
-在这个部分，你将学会如何用一行代码集成声网实时音视频 Web SDK 并验证 SDK 版本。
+在这个部分，你将学会如何用一行代码集成声网实时音视频 Web SDK 并验证 SDK 版本和浏览器兼容性。
 
 ## 实现方法
 
@@ -31,7 +31,7 @@ metaDescription: :00：一行代码集成 SDK"
 <p id="version"> </p>
 ```
 
-在 JavaScript 文件中，先通过 `version` 变量获取 SDK 版本号，再通过 `getElementById` 方法将版本号打印到 HTML 中。
+在 JavaScript 文件中，先通过 `VERSION` 变量获取 SDK 版本号，再通过 `getElementById` 方法将版本号打印到 HTML 中。
 
 **JavaScript**
 
@@ -42,13 +42,40 @@ let version = AgoraRTC.VERSION;
 document.getElementById("version").innerHTML = version;
 ```
 
+### 步骤三：验证浏览器兼容性
+
+确保你的 HTML 文件中包含一个 id 为 `compatibility` 的 `<span>` 标签：
+
+```html
+<p>你现在使用的浏览器 <span id="compatibility"> </span> 声网实时音视频 Web SDK。</p>
+```
+
+在 JavaScript 文件中，先通过 `checkSystemRequirements` 方法获取浏览器兼容信息，再通过 `getElementById` 方法将版本号打印到 HTML 中。
+
+```javascript
+let supportText = "";
+let isSupported = AgoraRTC.checkSystemRequirements();
+
+switch (isSupported) {
+  case true:
+    supportText = "不支持";
+    break;
+  case false:
+    supportText = "支持";
+    break;
+}
+
+// 将浏览器兼容信息打印到 HTML 中
+document.getElementById("compatibility").innerHTML = supportText;
+```
+
 ## 效果验证
 
-你可以在下面的控件中分别对 HTML、CSS 和 JavaScript 文件进行编辑，并运行项目验证效果。如果运行成功，HTML 页面会显示 SDK 的版本号。
+你可以在下面的控件中分别对 HTML、CSS 和 JavaScript 文件进行编辑，并运行项目验证效果。如果运行成功，HTML 页面会显示 SDK 的版本号并检查 SDK 是否兼容当前浏览器。
 
 项目中已经引用了 SDK 文件作为外部 JavaScript，你可以点击 **Resources** 按钮查看。
 
-<iframe height="400" style="width: 100%;" scrolling="no" title="Agora RTC Web SDK Tutorial" src="https://codepen.io/yamasite/embed/preview/dyZaqMM?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="800" style="width: 100%;" scrolling="no" title="Agora RTC Web SDK Tutorial" src="https://codepen.io/yamasite/embed/preview/dyZaqMM?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/yamasite/pen/dyZaqMM">
   Agora RTC Web SDK Tutorial</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
