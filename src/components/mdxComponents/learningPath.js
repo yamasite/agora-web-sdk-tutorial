@@ -46,7 +46,7 @@ const learningPath = () => (
       dateInnerStyle={{ background: '#1C8DFA', color: '#000' }}
       style={{ color: '#1C8DFA' }}
     >
-      <h3><a href="send-receive-media">03：发送与接收媒体流</a></h3>
+      <h3><a href="send-receive-media">04：发送与接收媒体流</a></h3>
       <p>调用 SDK 发送本地采集的媒体流，接收并渲染远端发送的媒体流。</p>
     </TimelineItem>
   </Timeline>
