@@ -1,7 +1,7 @@
 ---
-title: "01：采集并渲染本地视频"
-metaTitle: "01：采集并渲染本地视频"
-metaDescription: "01：采集并渲染本地视频"
+title: "采集并渲染本地视频"
+metaTitle: "采集并渲染本地视频"
+metaDescription: "采集并渲染本地视频"
 ---
 
 通过上一个部分的学习，你已经掌握了如何集成声网实时音视频 Web SDK。

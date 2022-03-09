@@ -1,7 +1,7 @@
 ---
-title: "00：一行代码集成 SDK"
-metaTitle: 00：一行代码集成 SDK"
-metaDescription: 00：一行代码集成 SDK"
+title: "一行代码集成 SDK"
+metaTitle: 一行代码集成 SDK"
+metaDescription: 一行代码集成 SDK"
 ---
 
 在这个部分，你将学会如何用一行代码集成声网实时音视频 Web SDK 并验证 SDK 版本和浏览器兼容性。

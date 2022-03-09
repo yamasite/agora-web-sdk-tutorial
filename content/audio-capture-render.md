@@ -1,7 +1,7 @@
 ---
-title: "02：采集并渲染本地音频"
-metaTitle: "02：采集并渲染本地音频"
-metaDescription: "02：采集并渲染本地音频"
+title: "采集并渲染本地音频"
+metaTitle: "采集并渲染本地音频"
+metaDescription: "采集并渲染本地音频"
 ---
 
 通过上一个部分的学习，你已经掌握了如何使用 SDK 采集并渲染本地视频。

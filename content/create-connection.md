@@ -1,7 +1,7 @@
 ---
-title: "03：建立传输通道"
-metaTitle: "03：建立传输通道"
-metaDescription: "03：建立传输通道"
+title: "建立传输通道"
+metaTitle: "建立传输通道"
+metaDescription: "建立传输通道"
 ---
 
 通过上一个部分的学习，你已经掌握了如何使用声网实时音视频 Web SDK 采集并渲染本地音频。

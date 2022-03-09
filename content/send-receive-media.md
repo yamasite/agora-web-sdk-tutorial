@@ -1,7 +1,7 @@
 ---
-title: "04：发送与接收媒体流"
-metaTitle: "04：发送与接收媒体流"
-metaDescription: "04：发送与接收媒体流"
+title: "发送与接收媒体流"
+metaTitle: "发送与接收媒体流"
+metaDescription: "发送与接收媒体流"
 ---
 
 通过上一个部分的学习，你已经掌握了如何使用声网实时音视频 Web SDK 创建音视频传输通道。
