@@ -75,7 +75,7 @@ document.getElementById("compatibility").innerHTML = supportText;
 
 项目中已经引用了 SDK 文件作为外部 JavaScript，你可以点击 **Resources** 按钮查看。
 
-<iframe height="800" style="width: 100%;" scrolling="no" title="Agora RTC Web SDK Tutorial" src="https://codepen.io/yamasite/embed/preview/dyZaqMM?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="800" style="width: 100%;" scrolling="no" title="Agora RTC Web SDK Tutorial" src="https://codepen.io/yamasite/embed/preview/dyZaqMM?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="{true}" allow="microphone;camera">
   See the Pen <a href="https://codepen.io/yamasite/pen/dyZaqMM">
   Agora RTC Web SDK Tutorial</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.

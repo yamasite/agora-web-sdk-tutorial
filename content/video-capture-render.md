@@ -169,7 +169,7 @@ metaDescription: "采集并渲染本地视频"
 
 你可以在下面的控件中分别对 HTML、CSS 和 JavaScript 文件进行编辑，并运行项目验证效果。如果运行成功，HTML 页面会显示你的摄像头的设备 ID，并在本地渲染摄像头采集的画面。
 
-<iframe height="800" style="width: 100%;" scrolling="no" title="02: Capture video through camera and render locally" src="https://codepen.io/yamasite/embed/preview/MWOxdGa?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" allow="microphone;camera">
+<iframe height="800" style="width: 100%;" scrolling="no" title="02: Capture video through camera and render locally" src="https://codepen.io/yamasite/embed/preview/MWOxdGa?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="{true}" allow="microphone;camera">
   See the Pen <a href="https://codepen.io/yamasite/pen/MWOxdGa">
   02: Capture video through camera and render locally</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.

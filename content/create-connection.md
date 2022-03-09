@@ -36,7 +36,7 @@ metaDescription: "建立传输通道"
 
 2. 为频道创建事件监听器。
 
-   `createClient` 返回的客户端实例是一个 `AgoraRTCClient` 对象，而 `AgoraRTCClient` 类继承了 Node.js 的 [EventEmitter 类](https://nodejs.org/api/events.html#class-eventemitter)。因此你可以使用 `emitter.on(eventName, listener)` 为相应的事件添加监听器。声网实时音视频 Web SDK 通过事件返回传输通道的状态，包括用户加入或离开频道的提醒、传输通道网络状态反馈等。
+   `createClient` 返回的客户端实例是一个 `AgoraRTCClient` 对象，而 `AgoraRTCClient` 类继承了 Node.js 的 [EventEmitter 类](https://nodejs.org/api/events.html#class-eventemitter)。因此你可以使用 `emitter.on(eventName, listener)` 为相应的事件添加监听器。声网实时音视频 Web SDK 通过事件返回传输通道的状态，包括用户加入或离开频道的提醒、传输通道网络状态反馈等。同理，你也可以使用 `emitter.off(eventName, listener)` 移除监听器。
 
     仿照 `EventEmitter` 创建事件监听的逻辑：
 
@@ -49,18 +49,19 @@ metaDescription: "建立传输通道"
     我们可以为频道创建以下监听器：
 
     ```javascript
-    client.on('uplinkNetworkQuality', (stream) => {
-        console.log('someone connected!');
+    // 添加远端用户成功加入当前频道事件监听器
+    client.on('user-joined', (AgoraRTCRemoteUser) => {
+        console.log('用户：' +  AgoraRTCRemoteUser.uid + ' 加入当前频道');
     });
     ```
 
 3. 调用 `join` 方法加入频道。你需要配置 App ID、Token、频道名（channelId）和用户名（uid）。
 
-    > App ID 是你的应用使用声网云服务的凭证。你会发现，教程之前的部分完全没有用到 App ID，这是因为你之前的操作都是在本地进行的，并没有涉及到音视频传输。你需要参考 [开始使用 Agora 平台](https://docs.agora.io/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms) 注册声网 Agora 账号，创建一个声网 Agora 项目（鉴权机制选择 **调试模式：App ID** ）并获取 App ID。
+    > App ID 是你的应用使用声网云服务的凭证。你会发现，教程之前的部分完全没有用到 App ID，这是因为你之前的操作都是在本地进行的，并没有涉及到音视频传输。你需要参考 [开始使用 Agora 平台](https://docs.agora.io/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms) 注册声网 Agora 账号，创建一个声网 Agora 项目（鉴权机制选择 **调试模式：App ID** ）并获取 App ID。对于同一款应用，应当使用相同的 App ID 认证。使用不同 App ID 的应用是无法互相通信的。
 
-    > Token 是声网为了提升你的 App 的安全性而设计的一种鉴权机制，与 App ID 结合使用。你可以自行选择是否启用。出于学习成本的考虑，为了降低复杂度，本教程建议你暂不使用 Token 鉴权。
+    > Token 是声网为了提升你的 App 的安全性而设计的一种鉴权机制，与 App ID 结合使用。你可以自行选择是否启用。出于学习成本的考虑，为了降低复杂度，本教程建议你暂不使用 Token 鉴权。如果你还是选择使用 Token 鉴权，详见 [开始使用 Agora 平台](https://docs.agora.io/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms) 获取一个音视频临时 Token。
 
-    > 频道名和用户名的概念可以参考上文的解释。如果你没有启用 Token 鉴权，你可以任意为频道名和用户名命名。例如，频道名可以是 `"testChannel"`，用户名可以是 `123456`。
+    > 频道名和用户名的概念可以参考上文的解释。如果你没有启用 Token 鉴权，你可以任意为频道名和用户名命名。例如，频道名可以是 `"testChannel"`，用户名可以是 `123456`。如果你启用了 Token 鉴权，因为 Token 是包含频道信息的，你需要保证频道名与生成临时 Token 时填入的频道名一致。
 
     ```javascript
     // 声网 App ID
@@ -86,3 +87,11 @@ metaDescription: "建立传输通道"
 ## 效果验证
 
 你可以在下面的控件中分别对 HTML、CSS 和 JavaScript 文件进行编辑，并运行项目验证效果。如果运行成功，页面会显示加入频道成功的信息。
+
+> 你需要填入 App ID 才能成功加入频道。参考上文注册声网账号、创建项目并获取 App ID。请不要在公共仓库或页面保存你的 App ID。
+
+<iframe height="800" style="width: 100%;" scrolling="no" title="04: Create a transmission channel" src="https://codepen.io/yamasite/embed/preview/wvPLgjL?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="{true}" allow="microphone;camera">
+  See the Pen <a href="https://codepen.io/yamasite/pen/wvPLgjL">
+  04: Create a transmission channel</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
