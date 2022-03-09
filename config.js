@@ -26,10 +26,11 @@ const config = {
       '/video-capture-render',
       '/audio-capture-render',
       '/create-connection',
+      '/send-receive-media',
 
     ],
     collapsedNav: [
-    //'/codeblock', // add trailing slash if enabled above
+    //'/introduction', // add trailing slash if enabled above
      ],
     links: [{ text: '声网 Agora 官方网站', link: 'https://agora.io' }, { text: '声网 Agora 文档中心', link: 'https://docs.agora.io' }, { text: 'Web SDK 示例项目', link: 'https://github.com/AgoraIO/API-Examples-Web' }],
     frontline: false,

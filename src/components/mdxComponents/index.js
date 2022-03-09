@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import CodeBlock from './codeBlock';
 import AnchorTag from './anchor';
 import BasicFlow from './flowChart';
+import learningPath from './learningPath';
 
 
 
@@ -80,6 +81,7 @@ export default {
   code: CodeBlock,
   a: AnchorTag,
   flow: BasicFlow,
+  learning: learningPath,
   // TODO add `img`
   // TODO add `blockquote`
   // TODO add `ul`

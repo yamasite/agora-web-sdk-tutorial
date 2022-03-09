@@ -52,7 +52,7 @@ const BasicFlow = () => (
     <ReactFlow
     elements={elements}
     paneMoveable={false}
-    nodesDraggable={false}
+    nodesDraggable={true}
     zoomOnScroll={true}
     panOnScroll={true}
     panOnScrollMode={"vertical"}

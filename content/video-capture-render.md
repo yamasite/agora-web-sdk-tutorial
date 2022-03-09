@@ -84,7 +84,9 @@ metaDescription: "01：采集并渲染本地视频"
     }
     ```
 
-3. 调用 `createCameraVideoTrack` 创建摄像头视频轨道并调用成员方法 `play` 通过 DOM 元素对视频进行渲染。这里轨道的概念和 WebRTC 中的 [track](https://developer.mozilla.org/zh-CN/docs/Web/API/MediaStreamTrack) 相似。一个轨道代表一路特定的视频源或音频源。声网 SDK 将不同来源的音视频轨道进行抽象，定义了摄像头视频轨道、屏幕采集视频轨道及自定义源视频轨道等。
+3. 调用 `createCameraVideoTrack` 创建摄像头视频轨道并调用成员方法 `play` 通过 DOM 元素对视频进行渲染。
+
+    > 这里轨道的概念和 WebRTC 中的 [track](https://developer.mozilla.org/zh-CN/docs/Web/API/MediaStreamTrack) 相似。一个轨道代表一路特定的视频源或音频源。声网 SDK 将不同来源的音视频轨道进行抽象，定义了摄像头视频轨道、屏幕采集视频轨道及自定义源视频轨道等。
 
     **HTML**
 

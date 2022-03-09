@@ -23,18 +23,36 @@ metaDescription: "03：建立传输通道"
 
 在声网实时音视频 Web SDK 中，你需要进行以下操作：
 
-1. 调用 `createClient` 创建客户端实例。你需要配置传输通道模式、视频编码格式等参数。SDK 会把采集的音视频帧编码后发送到 SD-RTN™ 进行传输。
+1. 调用 `createClient` 创建客户端实例。
+
+    你需要配置传输通道模式、视频编码格式等参数。SDK 会把采集的音视频帧进行编码后发送到 SD-RTN™ 进行传输。
 
     ```javascript
     // 通话模式，VP8 视频编码格式
     let config = {mode: "rtc", codec: "vp8"};
-    // 创建客户端实例
+    // 创建客户端实例。createClient 方法返回一个 AgoraRTCClient 对象。
     let client = AgoraRTC.createClient(config);
     ```
 
-2. 创建频道事件监听回调。声网实时音视频 Web SDK 会通过回调函数返回传输通道的状态。回调函数重写了 Node.js 的 [EventEmitter](https://nodejs.org/api/events.html#class-eventemitter)。
+2. 为频道创建事件监听器。
 
+   `createClient` 返回的客户端实例是一个 `AgoraRTCClient` 对象，而 `AgoraRTCClient` 类继承了 Node.js 的 [EventEmitter 类](https://nodejs.org/api/events.html#class-eventemitter)。因此你可以使用 `emitter.on(eventName, listener)` 为相应的事件添加监听器。声网实时音视频 Web SDK 通过事件返回传输通道的状态，包括用户加入或离开频道的提醒、传输通道网络状态反馈等。
 
+    仿照 `EventEmitter` 创建事件监听的逻辑：
+
+    ```javascript
+    server.on('connection', (stream) => {
+        console.log('someone connected!');
+    });
+    ```
+
+    我们可以为频道创建以下监听器：
+
+    ```javascript
+    client.on('uplinkNetworkQuality', (stream) => {
+        console.log('someone connected!');
+    });
+    ```
 
 3. 调用 `join` 方法加入频道。你需要配置 App ID、Token、频道名（channelId）和用户名（uid）。
 
