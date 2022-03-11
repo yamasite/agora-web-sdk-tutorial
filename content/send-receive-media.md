@@ -88,3 +88,11 @@ metaDescription: "发送与接收媒体流"
   05: Send and receive media tracks</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+
+## 接下来我该做什么？
+
+恭喜你使用声网实时音视频 Web SDK 完成了媒体流的发送与接收。到这一步，你已经了解了创建一个基于声网实时音视频 Web SDK 的浏览器应用的基本流程，并有能力通过 SDK 为网页端应用提供音视频通话能力。
+
+接下来，你可以通过声网的[开发者文档](https://docs.agora.io/cn/Video/product_video?platform=Web)，进一步了解 SDK 的功能细节和基于 SDK 功能的场景方案。
+
+我们后续还会推出覆盖更多功能、主题和场景的 SDK 教程，敬请关注。

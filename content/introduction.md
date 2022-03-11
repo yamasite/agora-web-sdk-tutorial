@@ -1,7 +1,7 @@
 ---
 title: "一行代码集成 SDK"
-metaTitle: 一行代码集成 SDK"
-metaDescription: 一行代码集成 SDK"
+metaTitle: "一行代码集成 SDK"
+metaDescription: "一行代码集成 SDK"
 ---
 
 在这个部分，你将学会如何用一行代码集成声网实时音视频 Web SDK 并验证 SDK 版本和浏览器兼容性。
@@ -17,6 +17,8 @@ metaDescription: 一行代码集成 SDK"
 ```html
 <script src="https://download.agora.io/sdk/release/AgoraRTC_N-4.9.3.js" type="text/javascript"></script>
 ```
+
+SDK 会在全局导出一个 `AgoraRTC` 对象，直接访问这个对象即可。
 
 ### 步骤二：验证 SDK 版本
 
@@ -80,8 +82,3 @@ document.getElementById("compatibility").innerHTML = supportText;
   Agora RTC Web SDK Tutorial</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
-
-
-## 更多信息
-
-你可以访问声网官方网站获取最新版的 [声网实时音视频 Web SDK](https://docs.agora.io/cn/Interactive%20Broadcast/downloads?platform=Web)。

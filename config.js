@@ -1,7 +1,7 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://www.agora.io',
+    siteUrl: 'https://agorawebsdktutorialmain.gatsbyjs.io',
     gaTrackingId: null,
     trailingSlash: false,
   },
@@ -30,7 +30,7 @@ const config = {
 
     ],
     collapsedNav: [
-    //'/introduction', // add trailing slash if enabled above
+    '/introduction', // add trailing slash if enabled above
      ],
     links: [{ text: '声网 Agora 官方网站', link: 'https://agora.io' }, { text: '声网 Agora 文档中心', link: 'https://docs.agora.io' }, { text: 'Web SDK 示例项目', link: 'https://github.com/AgoraIO/API-Examples-Web' }],
     frontline: false,
@@ -42,8 +42,8 @@ const config = {
     title: 'RTC Web SDK Training | Agora',
     description: 'Documentation built with mdx. Powering docs.agora.io ',
     ogImage: null,
-    docsLocation: 'https://github.com/yamasite/agora-web-sdk-tutorial/tree/master/content',
-    favicon: '',
+    docsLocation: null,
+    favicon: 'https://web-cdn.agora.io/doc-center/image/agora-logo.png',
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
