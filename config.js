@@ -42,7 +42,7 @@ const config = {
     title: 'RTC Web SDK Training | Agora',
     description: 'Documentation built with mdx. Powering docs.agora.io ',
     ogImage: null,
-    docsLocation: null,
+    docsLocation: 'https://github.com/yamasite/agora-web-sdk-tutorial/tree/master/content',
     favicon: 'https://web-cdn.agora.io/doc-center/image/agora-logo.png',
   },
   pwa: {
