@@ -14,7 +14,7 @@ metaDescription: "发送与接收媒体流"
 
 在声网实时音视频 Web SDK 中，你需要进行以下操作：
 
-1. 本地用户发送媒体流。
+1. 本地用户调用 `publish` 发送媒体流。
 
   > 还记得在[采集并渲染本地视频](video-capture-render)章节和[采集并渲染本地音频](audio-capture-render)创建的媒体轨道吗？你现在就可以通过[建立传输通道](create-connection)章节创建的频道发布它们了！
 
@@ -24,7 +24,8 @@ metaDescription: "发送与接收媒体流"
     .then((uid) => {
       console.log(uid + " joined channel!");
 
-      client
+     // 发布摄像头视频轨道
+     client
         .publish(cameraVideoTrack)
         .then(() => {
           console.log("视频轨道发布成功!");
@@ -32,6 +33,7 @@ metaDescription: "发送与接收媒体流"
         .catch((e) => {
           console.log("视频轨道发布失败!", e);
         });
+      // 发布麦克风音频轨道
       client
         .publish(microphoneAudioTrack)
         .then(() => {
