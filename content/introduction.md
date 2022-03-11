@@ -60,10 +60,10 @@ let isSupported = AgoraRTC.checkSystemRequirements();
 
 switch (isSupported) {
   case true:
-    supportText = "不支持";
+    supportText = "支持";
     break;
   case false:
-    supportText = "支持";
+    supportText = "不支持";
     break;
 }
 
