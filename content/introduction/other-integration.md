@@ -86,7 +86,7 @@ document.getElementById("compatibility").innerHTML = supportText;
 
 项目中已经引用了 SDK 的 npm 包作为外部 Package。在 Codepen 中用 cdn.skypack.dev 进行暂存。
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Extension: Integrate SDK in a TypeScript project" src="https://codepen.io/yamasite/embed/preview/PoEYpGL?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="{true}">
+<iframe height="400" style="width: 100%;" scrolling="no" title="Extension: Integrate SDK in a TypeScript project" src="https://codepen.io/yamasite/embed/preview/PoEYpGL?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="{true}">
   See the Pen <a href="https://codepen.io/yamasite/pen/PoEYpGL">
   Extension: Integrate SDK in a TypeScript project</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
