@@ -19,34 +19,23 @@ metaDescription: "发送与接收媒体流"
   > 还记得 **采集并渲染本地视频** 章节和 **采集并渲染本地音频** 章节创建的媒体轨道吗？你现在就可以通过 **建立传输通道** 章节创建的频道发布它们了！
 
   ```javascript
+  // 发布摄像头视频轨道
   client
-    .join(appId, channelId, token, uid)
-    .then((uid) => {
-      console.log(uid + " joined channel!");
-
-     // 发布摄像头视频轨道
-     client
-        .publish(cameraVideoTrack)
-        .then(() => {
-          console.log("视频轨道发布成功!");
-        })
-        .catch((e) => {
-          console.log("视频轨道发布失败!", e);
-        });
-      // 发布麦克风音频轨道
-      client
-        .publish(microphoneAudioTrack)
-        .then(() => {
-          console.log("音频轨道发布成功!");
-        })
-        .catch((e) => {
-          console.log("音频轨道发布失败!", e);
-        });
+    .publish(cameraVideoTrack)
+    .then(() => {
+      console.log("视频轨道发布成功!");
     })
     .catch((e) => {
-      console.log("Failed to join channel!", e);
-      document.getElementById("state").innerHTML =
-        "用户：" + uid + " 加入当前频道失败！" + e;
+      console.log("视频轨道发布失败!", e);
+    });
+  // 发布麦克风音频轨道
+  client
+    .publish(microphoneAudioTrack)
+    .then(() => {
+      console.log("音频轨道发布成功!");
+    })
+    .catch((e) => {
+      console.log("音频轨道发布失败!", e);
     });
   ```
 
