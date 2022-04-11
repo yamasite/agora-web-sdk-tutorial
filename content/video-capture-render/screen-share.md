@@ -105,7 +105,7 @@ document.getElementById(
 
 > 对于 Chrome 浏览器，示例代码中的分享音频选项仅在分享 Chrome 标签页时生效。如果你点击 **Share with Sound Enabled** 分享 Chrome 标签页之外的页面会抛出错误。
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Extension: Screen sharing" src="https://codepen.io/yamasite/embed/preview/LYerLyK?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" allow="microphone; display-capture">
+<iframe height="800" style="width: 100%;" scrolling="no" title="Extension: Screen sharing" src="https://codepen.io/yamasite/embed/preview/LYerLyK?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" allow="microphone; display-capture">
   See the Pen <a href="https://codepen.io/yamasite/pen/LYerLyK">
   Extension: Screen sharing</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
