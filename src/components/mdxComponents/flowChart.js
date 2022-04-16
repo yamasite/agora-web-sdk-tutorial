@@ -33,10 +33,10 @@ const elements = [
     style:{fontSize: 18},
   },
   // animated edge
-  { id: 'e1-3', source: '1', target: '3', animated: true,  type: 'custom', arrowHeadType: 'arrow',},
-  { id: 'e3-2', source: '3', target: '2', animated: true,  type: 'custom', arrowHeadType: 'arrow',},
-  { id: 'e3-5', source: '3', target: '5', animated: true,  type: 'custom', arrowHeadType: 'arrow',},
-  { id: 'e5-3', source: '5', target: '3', animated: true,  type: 'custom', arrowHeadType: 'arrow',},
+  { id: 'e1-3', source: '1', target: '3', animated: true,  type: 'custom', arrowHeadType: 'arrow', style: { stroke: 'red' },},
+  { id: 'e3-2', source: '3', target: '2', animated: true,  type: 'custom', arrowHeadType: 'arrow', style: { stroke: 'yellow' }},
+  { id: 'e3-5', source: '3', target: '5', animated: true,  type: 'custom', arrowHeadType: 'arrow', style: { stroke: 'red' },},
+  { id: 'e5-3', source: '5', target: '3', animated: true,  type: 'custom', arrowHeadType: 'arrow', style: { stroke: 'yellow' }},
 ];
 
 // Use custom node styles
