@@ -85,14 +85,20 @@ metaDescription: "建立传输通道"
 
 ## 效果验证
 
-你可以在下面的 CodePen 控件中分别对 HTML、CSS 和 JavaScript 文件进行编辑（例如改为 654321），并运行项目验证效果。如果运行成功，页面会显示加入频道成功的信息。
+你可以在下面的 CodePen 控件中分别对 HTML、CSS 和 JavaScript 文件进行编辑（例如将 user ID 改为 654321），并运行项目验证效果。如果运行成功，页面会显示加入频道成功的信息。
 
 此外，你还可以在一个新的选项卡中重复打开此页面，修改 JavaScript 文件中的 uid 变量的值，模拟远端用户加入频道。你是不能使用同一个用户 ID 重复加入一个频道的。
 
 > 你需要在 appId 变量中填入 App ID 才能成功加入频道。参考上文注册声网账号、创建项目并获取 App ID。请不要在公共仓库或页面保存你的 App ID。
+
+> 本示例假设你的声网项目没有开通 Token 鉴权。如果你想尝试 Token 鉴权，请根据 [开始使用 Agora 平台](https://docs.agora.io/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms) 生成 RTC 临时 token 并将值填入 token 参数。
 
 <iframe height="800" style="width: 100%;" scrolling="no" title="04: Create a transmission channel" src="https://codepen.io/yamasite/embed/preview/wvPLgjL?default-tab=js%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="{true}" allow="microphone;camera">
   See the Pen <a href="https://codepen.io/yamasite/pen/wvPLgjL">
   04: Create a transmission channel</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+
+## 课后练习
+
+<Newquiz04 />
