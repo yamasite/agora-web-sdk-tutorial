@@ -87,3 +87,7 @@ metaDescription: "发送与接收媒体流"
 接下来，你可以通过声网的[开发者文档](https://docs.agora.io/cn/Video/product_video?platform=Web)，进一步了解 SDK 的功能细节和基于 SDK 功能的场景方案。
 
 我们后续还会推出覆盖更多功能、主题和场景的 SDK 教程，敬请关注。
+
+## 课后练习
+
+<Newquiz05 />

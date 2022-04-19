@@ -82,3 +82,7 @@ document.getElementById("compatibility").innerHTML = supportText;
   Agora RTC Web SDK Tutorial</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+
+## 课后练习
+
+<Newquiz01 />

@@ -174,3 +174,7 @@ metaDescription: "采集并渲染本地音频"
   03: Capture audio through microphone and render locally</a> by Lutkin Wang (<a href="https://codepen.io/yamasite">@yamasite</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+
+## 课后练习
+
+<Newquiz03 />

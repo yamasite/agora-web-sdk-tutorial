@@ -5,6 +5,11 @@ import CodeBlock from './codeBlock';
 import AnchorTag from './anchor';
 import BasicFlow from './flowChart';
 import learningPath from './learningPath';
+import quiz01 from './quiz01';
+import quiz02 from './quiz02';
+import quiz03 from './quiz03';
+import quiz04 from './quiz04';
+import quiz05 from './quiz05';
 
 
 
@@ -82,6 +87,11 @@ export default {
   a: AnchorTag,
   flow: BasicFlow,
   learning: learningPath,
+  Newquiz01: quiz01,
+  Newquiz02: quiz02,
+  Newquiz03: quiz03,
+  Newquiz04: quiz04,
+  Newquiz05: quiz05,
   // TODO add `img`
   // TODO add `blockquote`
   // TODO add `ul`
