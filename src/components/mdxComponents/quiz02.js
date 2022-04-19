@@ -30,7 +30,7 @@ const quiz = {
       },
 
       {
-        "question": "？",
+        "question": "对于声网实时音视频 SDK 的轨道，说法正确的是？",
         "questionType": "text",
         "answers": [
             "复用了 WebRTC 的 track 概念",
